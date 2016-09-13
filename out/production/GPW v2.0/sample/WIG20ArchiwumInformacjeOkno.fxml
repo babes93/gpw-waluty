@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="807.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.WIG20ArchiwumInformacjeController">
+   <children>
+      <TableView fx:id="TabelaWIG20" prefHeight="554.0" prefWidth="807.0">
+        <columns>
+            <TableColumn fx:id="KolumnaID" prefWidth="36.0" text="ID" />
+          <TableColumn fx:id="KolumnaTicker" prefWidth="58.0" text="Ticker" />
+          <TableColumn fx:id="KolumnaNazwa" prefWidth="62.0" text="Nazwa" />
+            <TableColumn fx:id="KolumnaPelnaNazwa" prefWidth="172.0" text="Pelna Nazwa" />
+            <TableColumn fx:id="KolumnaSredniKurs" prefWidth="122.0" text="Sredni Kurs" />
+            <TableColumn fx:id="KolumnaOd" prefWidth="103.0" text="Od" />
+            <TableColumn fx:id="KolumnaDo" text="Do" />
+            <TableColumn fx:id="KolumnaLink" prefWidth="250.0" text="Link archiwum" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

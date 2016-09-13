@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.OpcjeController">
+   <children>
+      <TabPane prefHeight="290.0" prefWidth="628.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="WIG20">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="531.0" prefWidth="628.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Opcje Podstawowe WIG20">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Automatyczna Aktualizacja:" />
+                                          <RadioButton fx:id="WIG20AutomatycznaAktualizacjaOn" layoutX="209.0" layoutY="13.0" mnemonicParsing="false" text="On" />
+                                          <RadioButton fx:id="WIG20AutomatycznaAktualizacjaOff" layoutX="262.0" layoutY="13.0" mnemonicParsing="false" text="Off" />
+                                          <Label layoutX="14.0" layoutY="38.0" text="Aktualizacja po kazdym uruchomieniu:" />
+                                          <RadioButton fx:id="WIG20AktualizacjaPoUruchomieniuOn" layoutX="273.0" layoutY="37.0" mnemonicParsing="false" text="On" />
+                                          <RadioButton fx:id="WIG20AktualizacjaPoUruchomieniuOff" layoutX="326.0" layoutY="37.0" mnemonicParsing="false" text="Off" />
+                                          <Label layoutX="14.0" layoutY="67.0" text="Aktualizacja po godzienie:" />
+                                          <TextField fx:id="WIG20GodzinaAktualizacjiText" layoutX="355.0" layoutY="62.0" prefHeight="25.0" prefWidth="82.0" />
+                                          <Label layoutX="14.0" layoutY="99.0" text="Wyswietlanie punktow na wykresie:" />
+                                          <CheckBox fx:id="WIG20WyswietalniePunktowMiesiac" layoutX="250.0" layoutY="98.0" mnemonicParsing="false" text="Ostatni Miesiac" />
+                                          <CheckBox fx:id="WIG20WyswietlaniePunktowRok" layoutX="381.0" layoutY="98.0" mnemonicParsing="false" text="Ostatni Rok" />
+                                          <CheckBox fx:id="WIG20WyswietlaniePunktowCaleArchiwum" layoutX="489.0" layoutY="98.0" mnemonicParsing="false" text="Cale Archiwum" />
+                                          <RadioButton fx:id="WIG20AktualizacjaPoGodzinieOn" layoutX="195.0" layoutY="65.0" mnemonicParsing="false" text="On" />
+                                          <RadioButton fx:id="WIG20AktualizacjaPoGodzienieOff" layoutX="242.0" layoutY="65.0" mnemonicParsing="false" text="Off" />
+                                          <Label layoutX="294.0" layoutY="67.0" text="Godzina:" />
+                                          <Button fx:id="WIG20Zapisz" layoutX="17.0" layoutY="188.0" mnemonicParsing="false" text="Zapisz" />
+                                          <Label layoutX="15.0" layoutY="130.0" text="Wyswietlanie punktów dla danych:" />
+                                          <RadioButton fx:id="WIG20WyswietlaniePunktowOn" layoutX="245.0" layoutY="129.0" mnemonicParsing="false" text="On" />
+                                          <RadioButton fx:id="WIG20WyswietlaniePunktowOff" layoutX="296.0" layoutY="129.0" mnemonicParsing="false" text="Off" />
+                                          <Label layoutX="356.0" layoutY="131.0" text="Poniżej:" />
+                                          <TextField fx:id="WIG20WyswietlaniePunktowText" layoutX="407.0" layoutY="126.0" prefHeight="25.0" prefWidth="78.0" />
+                                          <Label layoutX="446.0" layoutY="67.0" text="(HH:MM)" />
+                                          <Label layoutX="489.0" layoutY="131.0" text="(min. 10)" />
+                                          <Label layoutX="322.0" layoutY="14.0" text="Data ostatniej aktualizacji:" />
+                                          <TextField fx:id="DataOstatniejAktualizacjiWIG20" layoutX="497.0" layoutY="10.0" prefHeight="25.0" prefWidth="120.0" />
+                                          <Label layoutX="18.0" layoutY="162.0" text="Maksymalna wczytana ilosc danych na wykresie:" />
+                                          <TextField fx:id="WIG20MaxIloscDanychWykres" layoutX="340.0" layoutY="157.0" prefHeight="25.0" prefWidth="85.0" />
+                                          <Label layoutX="437.0" layoutY="162.0" text="(zalecany max. &lt;250)" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Waluty NBP">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="531.0" prefWidth="628.0" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab text="Opcje Podstawowe Waluty NBP">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Automatyczna Aktualizacja:" />
+                                          <RadioButton fx:id="WalutyAutomatycznaAktualizacjaOn" layoutX="209.0" layoutY="13.0" mnemonicParsing="false" text="On" />
+                                          <RadioButton fx:id="WalutyAutomatycznaAktualizacjaOff" layoutX="262.0" layoutY="13.0" mnemonicParsing="false" text="Off" />
+                                          <Label layoutX="14.0" layoutY="38.0" text="Aktualizacja po kazdym uruchomieniu:" />
+                                          <RadioButton fx:id="WalutyAktualizacjaPoUruchomieniuOn" layoutX="273.0" layoutY="37.0" mnemonicParsing="false" text="On" />
+                                          <RadioButton fx:id="WalutyAktualizacjaPoUruchomieniuOff" layoutX="326.0" layoutY="37.0" mnemonicParsing="false" text="Off" />
+                                          <Label layoutX="14.0" layoutY="67.0" text="Aktualizacja po godzienie:" />
+                                          <TextField fx:id="WalutyGodzinaAktualizacjiText" layoutX="355.0" layoutY="62.0" prefHeight="25.0" prefWidth="82.0" />
+                                          <Label layoutX="14.0" layoutY="99.0" text="Wyswietlanie punktow na wykresie:" />
+                                          <CheckBox fx:id="WalutyWyswietalniePunktowMiesiac" layoutX="250.0" layoutY="98.0" mnemonicParsing="false" text="Ostatni Miesiac" />
+                                          <CheckBox fx:id="WalutyWyswietlaniePunktowRok" layoutX="381.0" layoutY="98.0" mnemonicParsing="false" text="Ostatni Rok" />
+                                          <CheckBox fx:id="WalutyWyswietlaniePunktowCaleArchiwum" layoutX="489.0" layoutY="98.0" mnemonicParsing="false" text="Cale Archiwum" />
+                                          <RadioButton fx:id="WalutyAktualizacjaPoGodzinieOn" layoutX="195.0" layoutY="65.0" mnemonicParsing="false" text="On" />
+                                          <RadioButton fx:id="WalutyAktualizacjaPoGodzienieOff" layoutX="242.0" layoutY="65.0" mnemonicParsing="false" text="Off" />
+                                          <Label layoutX="294.0" layoutY="67.0" text="Godzina:" />
+                                          <Button fx:id="WalutyZapisz" layoutX="13.0" layoutY="193.0" mnemonicParsing="false" text="Zapisz" />
+                                          <Label layoutX="14.0" layoutY="125.0" text="Wyswietlanie punktow dla danych:" />
+                                          <RadioButton fx:id="WalutyWyswietlPunktyOn" layoutX="242.0" layoutY="124.0" mnemonicParsing="false" text="On" />
+                                          <RadioButton fx:id="WalutyWyswietlPunktyOff" layoutX="286.0" layoutY="124.0" mnemonicParsing="false" text="Off" />
+                                          <Label layoutX="337.0" layoutY="126.0" text="Poniżej:" />
+                                          <TextField fx:id="WalutyWyswietlPunktyText" layoutX="388.0" layoutY="121.0" prefHeight="25.0" prefWidth="77.0" />
+                                          <Label layoutX="447.0" layoutY="67.0" text="(HH:MM)" />
+                                          <Label layoutX="471.0" layoutY="125.0" text="(min. 10)" />
+                                          <Label layoutX="322.0" layoutY="14.0" text="Data ostatniej aktualizacji:" />
+                                          <TextField fx:id="DataOstatniejAktualizacjiWaluty" layoutX="497.0" layoutY="10.0" prefHeight="25.0" prefWidth="120.0" />
+                                          <Label layoutX="11.0" layoutY="161.0" text="Maksymalna wczytana ilosc danych na wykresie:" />
+                                          <TextField fx:id="WalutyMaxIloscDanychWykres" layoutX="334.0" layoutY="157.0" prefHeight="25.0" prefWidth="85.0" />
+                                          <Label layoutX="423.0" layoutY="161.0" text="(zalecany max. &lt;250)" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

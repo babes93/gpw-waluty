@@ -1,0 +1,46 @@
+
+.root {
+   -fx-base: rgb(50,50,50);
+   -fx-background: rgb(50,50,50);
+   -fx-control-inner-background: rgb(50,50,50);
+   -fx-font-size: 10pt ;
+}
+
+.tab {
+    -fx-background-color: linear-gradient(to top, -fx-base, derive(-fx-base,30%));
+}
+
+.menu-bar{
+    -fx-background-color: linear-gradient(to bottom, -fx-base, derive(-fx-base,30%));
+}
+
+.tool-bar:horizontal{
+    -fx-background-color:
+    linear-gradient(to bottom, derive(-fx-base,+50%),derive(-fx-base,-40%),derive(-fx-base,-20%));
+}
+
+.button {
+    -fx-background-color: #585858;
+}
+
+.button:hover {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-color: -fx-hover-base;
+}
+
+.progress-bar{
+     -fx-background-border: #B8B8B8;
+     -fx-accent: #B8B8B8;
+}
+
+.progress-indicator{
+    -fx-background-border: #B8B8B8;
+    -fx-accent: #B8B8B8;
+}
+
+.table-view {
+    -fx-table-cell-border-color:derive(-fx-base,+10%);
+    -fx-table-header-border-color:derive(-fx-base,+20%);
+}
+
+

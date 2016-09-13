@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ArchiwumWalutyInformacjeController">
+   <children>
+      <TableView fx:id="TabelaWalutyPelna" prefHeight="400.0" prefWidth="630.0">
+        <columns>
+          <TableColumn fx:id="KolumnaKodWaluty" prefWidth="91.0" text="Kod Waluty" />
+          <TableColumn fx:id="KolumnaNazwa" prefWidth="114.0" text="Nazwa Waluty" />
+            <TableColumn fx:id="KolumnaDataOd" prefWidth="98.0" text="Data Od" />
+            <TableColumn fx:id="KolumnaDataDo" prefWidth="88.0" text="Data Do" />
+            <TableColumn fx:id="KolumnaKupno" prefWidth="71.0" text="Kupno" />
+            <TableColumn fx:id="KolumnaSprzedaz" prefWidth="74.0" text="Sprzedaz" />
+            <TableColumn fx:id="KolumnaPrzelicznik" prefWidth="87.0" text="Przelicznik" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

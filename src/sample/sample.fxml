@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="1025.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+   
+         <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1025.0">
+           <menus>
+             <Menu mnemonicParsing="false" text="Ustawienia">
+               <items>
+                  <MenuItem fx:id="PobieranieWalutMenu" mnemonicParsing="false" text="Pobierz Archiwum Walut" />
+                  <MenuItem fx:id="WIG20ArchiwumMenuItem" mnemonicParsing="false" text="Pobierz WIG20 archiwum" />
+                  <MenuItem fx:id="MenuOpcje" mnemonicParsing="false" text="Opcje" />
+               </items>
+             </Menu>
+             <Menu mnemonicParsing="false" text="Wykresy Zawansowane">
+               <items>
+                 <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+             </Menu>
+            <Menu mnemonicParsing="false" text="Dodatki">
+              <items>
+                <MenuItem fx:id="MenuItemPelneInfoArchiwum" mnemonicParsing="false" text="Informacje Archiwum WIG20" />
+                  <MenuItem fx:id="MenuItemArchiwumWaluty" mnemonicParsing="false" text="Informacje Archiwum Waluty" />
+                  <MenuItem fx:id="MenuItemSkryptSciLab" mnemonicParsing="false" text="Skrypt SciLab" />
+              </items>
+            </Menu>
+               <Menu mnemonicParsing="false" text="Pomoc">
+                 <items>
+                   <MenuItem fx:id="MenuItemPomocInformacje" mnemonicParsing="false" text="Informacje" />
+                 </items>
+               </Menu>
+           </menus>
+         </MenuBar>
+         <TabPane layoutY="27.0" prefHeight="415.0" prefWidth="293.0" tabClosingPolicy="UNAVAILABLE">
+           <tabs>
+             <Tab text="Info WIG20">
+                  <content>
+                     <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                        <children>
+                           <Label layoutX="14.0" layoutY="14.0" text="Wczytywanie danych z bazy :" />
+                           <ProgressIndicator fx:id="ProgIndWczytywanie" layoutX="195.0" layoutY="49.0" progress="0.0" />
+                           <ProgressBar fx:id="ProgBarWczytywanie" layoutX="9.0" layoutY="112.0" prefHeight="18.0" prefWidth="275.0" progress="0.0" />
+                           <TableView fx:id="TabelaSpolek" layoutY="197.0" prefHeight="187.0" prefWidth="293.0">
+                             <columns>
+                              <TableColumn fx:id="KolumnaTicker" maxWidth="91.0" prefWidth="54.0" text="Ticker" />
+                              <TableColumn fx:id="KolumnaSredniNotowania" prefWidth="58.0" text="Sredni" />
+                               <TableColumn fx:id="KolumnaOd" maxWidth="169.0" prefWidth="67.0" text="Od" />
+                                 <TableColumn fx:id="KolumnaDo" maxWidth="222.0" prefWidth="111.0" text="Do" />
+                             </columns>
+                           </TableView>
+                           <Label layoutX="12.0" layoutY="176.0" text="Informacje podstawowe o archiwum:" />
+                        <RadioButton fx:id="OstatniMiesiacCheck" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" text="Ostatni Miesiac" />
+                        <RadioButton fx:id="OstatniRokCheck" layoutX="14.0" layoutY="61.0" mnemonicParsing="false" text="Ostatni Rok" />
+                        <RadioButton fx:id="CaleArchiwumCheck" layoutX="14.0" layoutY="85.0" mnemonicParsing="false" text="Cale Archiwum" />
+                        <ComboBox fx:id="ComboBoxSpolki" layoutX="125.0" layoutY="141.0" prefHeight="25.0" prefWidth="154.0" promptText="Lista Spolek" />
+                        <Label layoutX="8.0" layoutY="145.0" text="Wyswietl Spolke:" />
+                        </children>
+                     </AnchorPane>
+                  </content>
+               </Tab>
+            <Tab text="Info Waluty">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Wczytywanie danych z bazy :" />
+                        <ProgressIndicator fx:id="ProgIndWczytywanieWaluty" layoutX="196.0" layoutY="47.0" progress="0.0" />
+                        <ProgressBar fx:id="ProgBarWczytywanieWaluty" layoutX="9.0" layoutY="112.0" prefHeight="18.0" prefWidth="275.0" progress="0.0" />
+                        <TableView fx:id="TabelaWaluty" layoutY="222.0" prefHeight="164.0" prefWidth="293.0">
+                           <columns>
+                              <TableColumn fx:id="KolumnaWaluty" prefWidth="41.0" text="Kod" />
+                              <TableColumn fx:id="KolumnaNazwa" prefWidth="73.0" text="Nazwa" />
+                              <TableColumn fx:id="KolumnaOdWaluty" prefWidth="74.0" text="Od" />
+                              <TableColumn fx:id="KolumnaDoWaluty" prefWidth="101.0" text="Do" />
+                           </columns>
+                        </TableView>
+                        <RadioButton fx:id="OstatniMiesiacCheckWaluty" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" text="Ostatni Miesiac" />
+                        <RadioButton fx:id="OstatniRokCheckWaluty" layoutX="14.0" layoutY="61.0" mnemonicParsing="false" text="Ostatni Rok" />
+                        <RadioButton fx:id="CaleArchiwumCheckWaluty" layoutX="14.0" layoutY="85.0" mnemonicParsing="false" text="Cale Archiwum" />
+                        <ComboBox fx:id="ComboBoxWaluty" layoutX="9.0" layoutY="142.0" prefHeight="25.0" prefWidth="78.0" />
+                        <Button fx:id="DodajUsunWalutyButton" layoutX="93.0" layoutY="143.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Dodaj" />
+                        <CheckBox fx:id="CheckBoxKupnoWaluty" layoutX="19.0" layoutY="185.0" mnemonicParsing="false" text="Kupno" />
+                        <CheckBox fx:id="CheckBoxSprzedazWaluty" layoutX="87.0" layoutY="186.0" mnemonicParsing="false" text="Sprzedaz" />
+                        <CheckBox fx:id="CheckBoxPrzelicznikWaluty" layoutX="181.0" layoutY="185.0" mnemonicParsing="false" text="Przelicznik" />
+                        <Button fx:id="WyczyscWykresWalutyButton" layoutX="157.0" layoutY="142.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="Wyczysc Wykres" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+           </tabs>
+         </TabPane>
+         <ListView fx:id="KonsolaWidok" layoutY="443.0" prefHeight="224.0" prefWidth="293.0" />
+         <TabPane layoutX="293.0" layoutY="27.0" prefHeight="645.0" prefWidth="732.0" tabClosingPolicy="UNAVAILABLE">
+           <tabs>
+             <Tab text="WIG20 wykresy podstawowe">
+                  <content>
+                     <AnchorPane prefHeight="603.0" prefWidth="732.0">
+                        <children>
+                        <AnchorPane fx:id="PanelWykresow" prefHeight="615.0" prefWidth="732.0">
+                           <children>
+                              <TabPane prefHeight="295.0" prefWidth="732.0" tabClosingPolicy="UNAVAILABLE">
+                                 <tabs>
+                                    <Tab text="Liniowy">
+                                       <content>
+                                          <AnchorPane fx:id="PanelSNSLin" prefHeight="269.0" prefWidth="732.0" />
+                                       </content>
+                                    </Tab>
+                                    <Tab text="Świecowy">
+                                       <content>
+                                          <AnchorPane fx:id="SwiecowyPanelSNS" prefHeight="314.0" prefWidth="732.0" />
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                              <TextField fx:id="DataDoSNSL" layoutX="14.0" layoutY="537.0" prefHeight="25.0" prefWidth="101.0" />
+                              <TextField fx:id="DataOdSNSL" layoutX="14.0" layoutY="499.0" prefHeight="25.0" prefWidth="102.0" />
+                              <Slider fx:id="SliderDoSNS" layoutX="123.0" layoutY="543.0" prefHeight="16.0" prefWidth="493.0" />
+                              <Slider fx:id="SliderOdSNS" layoutX="123.0" layoutY="505.0" prefHeight="16.0" prefWidth="496.0" />
+                              <CheckBox fx:id="OtwarcieSNSCheck" layoutX="17.0" layoutY="475.0" mnemonicParsing="false" text="Otwarcie" />
+                              <CheckBox fx:id="ZamkniecieSNSCheck" layoutX="108.0" layoutY="475.0" mnemonicParsing="false" text="Zamkniecie" />
+                              <CheckBox fx:id="MinSNSCheck" layoutX="231.0" layoutY="476.0" mnemonicParsing="false" text="Min Kurs" />
+                              <CheckBox fx:id="MaxSNSCheck" layoutX="323.0" layoutY="475.0" mnemonicParsing="false" text="Max Kurs" />
+                              <CheckBox fx:id="CiaglySNSCheck" layoutX="413.0" layoutY="476.0" mnemonicParsing="false" text="Ciagly Kurs" />
+                              <TextField fx:id="DataOdSNSR" layoutX="619.0" layoutY="499.0" prefHeight="25.0" prefWidth="107.0" />
+                              <TextField fx:id="DataDoSNSR" layoutX="620.0" layoutY="537.0" prefHeight="25.0" prefWidth="105.0" />
+                              <AnchorPane fx:id="BarPanelSNS" layoutX="-1.0" layoutY="298.0" prefHeight="172.0" prefWidth="732.0" />
+                              <DatePicker fx:id="DataOdWykresSNS" layoutX="37.0" layoutY="571.0" prefHeight="25.0" prefWidth="183.0" />
+                              <DatePicker fx:id="DataDoWykresSNS" layoutX="249.0" layoutY="571.0" prefHeight="25.0" prefWidth="171.0" />
+                              <Button fx:id="WyswietlWykButtonSNS" layoutX="426.0" layoutY="571.0" mnemonicParsing="false" text="Wyswietl Wykres" />
+                              <Button fx:id="PrzesPButSNS" layoutX="689.0" layoutY="571.0" mnemonicParsing="false" text=" &gt;&gt;" />
+                              <Button fx:id="PrzesLButSNS" layoutX="594.0" layoutY="571.0" mnemonicParsing="false" text="&lt;&lt; " />
+                              <Label layoutX="14.0" layoutY="575.0" text="Od:" />
+                              <Label layoutX="223.0" layoutY="575.0" text="Do:" />
+                              <TextField fx:id="PrzesTextFieldSNS" layoutX="647.0" layoutY="571.0" prefHeight="25.0" prefWidth="34.0" />
+                              <CheckBox fx:id="CheckBoxWolumen" layoutX="520.0" layoutY="476.0" mnemonicParsing="false" text="Wolumen" />
+                              <CheckBox fx:id="CheckBoxObrot" layoutX="610.0" layoutY="475.0" mnemonicParsing="false" text="Obrot" />
+                           </children>
+                        </AnchorPane>
+                        </children>
+                     </AnchorPane>
+                  </content>
+               </Tab>
+             <Tab text="Kursy Walut">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <DatePicker fx:id="DataOdWaluty" layoutX="49.0" layoutY="577.0" prefHeight="25.0" prefWidth="169.0" />
+                        <DatePicker fx:id="DataDoWaluty" layoutX="252.0" layoutY="576.0" prefHeight="25.0" prefWidth="172.0" />
+                        <Label layoutX="14.0" layoutY="581.0" text="Od:" />
+                        <Label layoutX="226.0" layoutY="582.0" text="Do:" />
+                        <Button fx:id="ButtonWyswietlWaluty" layoutX="438.0" layoutY="575.0" mnemonicParsing="false" text="Wyswietl WYkres" />
+                        <Button fx:id="ButtonPrzesunLewoWaluty" layoutX="579.0" layoutY="577.0" mnemonicParsing="false" text="&lt;&lt;" />
+                        <TextField fx:id="TextPrzesunWaluty" layoutX="627.0" layoutY="577.0" prefHeight="25.0" prefWidth="42.0" />
+                        <Button fx:id="ButtonPrzesunPrawoWaluty" layoutX="675.0" layoutY="576.0" mnemonicParsing="false" text="&gt;&gt;" />
+                        <TextField fx:id="TextDoWalutyL" layoutX="14.0" layoutY="534.0" prefHeight="25.0" prefWidth="109.0" />
+                        <TextField fx:id="TextOdWalutyL" layoutX="14.0" layoutY="498.0" prefHeight="25.0" prefWidth="110.0" />
+                        <TextField fx:id="TextDoWalutyR" layoutX="592.0" layoutY="534.0" prefHeight="25.0" prefWidth="123.0" />
+                        <TextField fx:id="TextOdWalutyR" layoutX="592.0" layoutY="498.0" prefHeight="25.0" prefWidth="123.0" />
+                        <AnchorPane fx:id="PanelWaluty" prefHeight="485.0" prefWidth="732.0" />
+                        <Slider fx:id="SliderDoWaluty" layoutX="133.0" layoutY="540.0" prefHeight="16.0" prefWidth="449.0" />
+                        <Slider fx:id="SliderOdWaluty" layoutX="133.0" layoutY="504.0" prefHeight="16.0" prefWidth="454.0" />
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+           </tabs>
+         </TabPane>
+   </children>
+</AnchorPane>

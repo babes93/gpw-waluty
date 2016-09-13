@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SkryptySciLabController">
+   <children>
+      <TextField fx:id="KatalogTextField" layoutX="73.0" layoutY="14.0" prefHeight="25.0" prefWidth="335.0" />
+      <Label layoutX="14.0" layoutY="19.0" text="Katalog:" />
+      <Button fx:id="WybierzKatalogButton" layoutX="414.0" layoutY="14.0" mnemonicParsing="false" text="Wybierz Katalog" />
+      <CheckBox fx:id="PlikiDanychCheck" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" text="Pliki Danych" />
+      <CheckBox fx:id="PlikiWczytywaniaCheck" layoutX="14.0" layoutY="80.0" mnemonicParsing="false" text="Plik wczytywania danych" />
+      <Button fx:id="GenerujPlikiButton" layoutX="357.0" layoutY="76.0" mnemonicParsing="false" text="Generuj Pliki" />
+      <ProgressIndicator fx:id="ProgInd" layoutX="489.0" layoutY="54.0" progress="0.0" />
+      <ProgressBar fx:id="ProgBar" layoutX="7.0" layoutY="114.0" prefHeight="20.0" prefWidth="527.0" progress="0.0" />
+      <CheckBox fx:id="PlikiWIG20Check" layoutX="231.0" layoutY="51.0" mnemonicParsing="false" text="WIG20" />
+      <CheckBox fx:id="plikiWalutyNBP" layoutX="232.0" layoutY="81.0" mnemonicParsing="false" text="Waluty NBP" />
+      <CheckBox fx:id="PlikInfoCheck" layoutX="357.0" layoutY="51.0" mnemonicParsing="false" text="Plik Info" />
+   </children>
+</AnchorPane>
